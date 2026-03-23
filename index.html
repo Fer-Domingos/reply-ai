@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reply AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="hero__badge">Reply AI</div>
+        <h1>Generate polished responses in seconds.</h1>
+        <p>
+          Paste a message, choose your tone, and instantly get ready-to-send replies for
+          professional, friendly, or direct communication.
+        </p>
+      </header>
+
+      <main class="workspace">
+        <section class="composer card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Message input</p>
+              <h2>What do you need to reply to?</h2>
+            </div>
+            <span class="helper-pill">No authentication required</span>
+          </div>
+
+          <label class="sr-only" for="messageInput">Message to respond to</label>
+          <textarea
+            id="messageInput"
+            placeholder="Example: Hi, just checking if you can send over the revised proposal by tomorrow afternoon."
+          ></textarea>
+
+          <div class="composer__footer">
+            <p id="statusText" class="status-text">Enter a message to generate suggested replies.</p>
+            <button id="generateBtn" class="generate-btn" type="button">
+              <span>Generate Replies</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="responses" aria-live="polite">
+          <article class="response-card card accent-professional">
+            <div class="response-card__header">
+              <div>
+                <p class="eyebrow">Tone</p>
+                <h3>Professional</h3>
+              </div>
+              <button class="copy-btn" type="button" data-tone="professional">Copy</button>
+            </div>
+            <p class="response-text" id="professionalOutput">
+              Your professional reply will appear here.
+            </p>
+          </article>
+
+          <article class="response-card card accent-friendly">
+            <div class="response-card__header">
+              <div>
+                <p class="eyebrow">Tone</p>
+                <h3>Friendly</h3>
+              </div>
+              <button class="copy-btn" type="button" data-tone="friendly">Copy</button>
+            </div>
+            <p class="response-text" id="friendlyOutput">
+              Your friendly reply will appear here.
+            </p>
+          </article>
+
+          <article class="response-card card accent-direct">
+            <div class="response-card__header">
+              <div>
+                <p class="eyebrow">Tone</p>
+                <h3>Direct</h3>
+              </div>
+              <button class="copy-btn" type="button" data-tone="direct">Copy</button>
+            </div>
+            <p class="response-text" id="directOutput">
+              Your direct reply will appear here.
+            </p>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
